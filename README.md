@@ -1,4 +1,3 @@
-// README.md
 # React Collab Practice App
 
 A starter React app designed for a collaborative coding and learning environment. This project introduces:
