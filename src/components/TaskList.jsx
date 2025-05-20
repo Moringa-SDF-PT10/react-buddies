@@ -35,7 +35,7 @@ const tasks = [
       <ul>
         {tasks.map(([task1, task2, leader], idx) => (
           <li key={idx} style={{ marginBottom: '1rem' }}>
-            <strong>Group {idx} { leader ? `(${leader})` : ""}</strong>
+            <strong>Group {idx} { leader ? `arsenal (${leader})` : ""}</strong>
             <ul>
               <li>{task1}</li>
               <li>{task2}</li>
