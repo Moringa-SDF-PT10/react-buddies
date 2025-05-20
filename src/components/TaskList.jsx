@@ -18,7 +18,8 @@ const tasks = [
      "Display last submitted value using useRef"]
     ,
     ["Create a modal that opens using useRef (access DOM node directly)",
-     "Close modal on outside click using useEffect"],
+     "Close modal on outside click using useEffect",
+    "Valentine"],
     ["Persist tasks in localStorage and load on mount",
      "Add a task filter (completed/pending) with useState"],
     ["Add a list of members that can be edited inline (useState)",
@@ -27,7 +28,7 @@ const tasks = [
     ["Highlight the focused input in green using useRef",
      "Add a delay before focus color disappears using setTimeout"],
     ["Add random motivational quotes with refresh button (useEffect + useState)",
-     "Load quote from a local JSON file", "Arnold"]
+     "Load quote from a local JSON file", "Arnold", "Faith"]
   ];
 
   export default function TaskList() {
