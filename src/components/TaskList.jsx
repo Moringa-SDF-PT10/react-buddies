@@ -28,7 +28,7 @@ const tasks = [
     ["Highlight the focused input in green using useRef",
      "Add a delay before focus color disappears using setTimeout"],
     ["Add random motivational quotes with refresh button (useEffect + useState)",
-     "Load quote from a local JSON file"]
+     "Load quote from a local JSON file", "Faith"]
   ];
 
   export default function TaskList() {
