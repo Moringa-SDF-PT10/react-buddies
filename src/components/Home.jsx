@@ -30,7 +30,8 @@ export default function Home(){
                 <p>Previous Count: {prevCount.current}</p>
             <button onClick={increaseCount} >Increase button count</button>
             </div>
-            
+            {/* <div style={display.block}></div> */}
+
         </div>
     )
 }
