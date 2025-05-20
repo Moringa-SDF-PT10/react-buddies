@@ -28,7 +28,7 @@ const tasks = [
     ["Highlight the focused input in green using useRef",
      "Add a delay before focus color disappears using setTimeout"],
     ["Add random motivational quotes with refresh button (useEffect + useState)",
-     "Load quote from a local JSON file", "Faith"]
+     "Load quote from a local JSON file", "Arnold", "Faith"]
   ];
 
   export default function TaskList() {
@@ -36,7 +36,7 @@ const tasks = [
       <ul>
         {tasks.map(([task1, task2, leader], idx) => (
           <li key={idx} style={{ marginBottom: '1rem' }}>
-            <strong>Group {idx} { leader ? `(${leader})` : ""}</strong>
+            <strong>Group {idx} { leader ? `arsenal (${leader})` : ""}</strong>
             <ul>
               <li>{task1}</li>
               <li>{task2}</li>
