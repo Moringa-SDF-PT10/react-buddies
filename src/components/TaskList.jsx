@@ -1,4 +1,5 @@
 const tasks = [
+    ["Do", "Nothing", "InC"],
     ["Add a character count live update on the input field (useEffect + useState)",
      "Highlight input when character count exceeds a threshold"],
     ["Create a dark mode toggle (useState + effect on document.body)",
@@ -32,9 +33,9 @@ const tasks = [
   export default function TaskList() {
     return (
       <ul>
-        {tasks.map(([task1, task2], idx) => (
+        {tasks.map(([task1, task2, leader], idx) => (
           <li key={idx} style={{ marginBottom: '1rem' }}>
-            <strong>Group {idx + 1}</strong>
+            <strong>Group {idx} { leader ? `(${leader})` : ""}</strong>
             <ul>
               <li>{task1}</li>
               <li>{task2}</li>
