@@ -4,7 +4,7 @@ const tasks = [
     ["Create a dark mode toggle (useState + effect on document.body)",
      "Save dark mode setting in localStorage and load on app start"],
     ["Add a 'clear input' button using useRef",
-     "Track focus state and visually indicate focused field"],
+     "Track focus state and visually indicate focused field", "Reagan Nyauma"],
     ["Create a new page showing a live clock (useEffect with setInterval)",
      "Add timezone switcher using controlled dropdown"],
     ["Add routing to a 'Team Info' page and populate it with dummy data",
