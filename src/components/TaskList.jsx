@@ -1,7 +1,7 @@
 const tasks = [
     ["Do", "Nothing", "InC"],
     ["Add a character count live update on the input field (useEffect + useState)",
-     "Highlight input when character count exceeds a threshold"],
+     "Highlight input when character count exceeds a threshold", "Vallary"],
     ["Create a dark mode toggle (useState + effect on document.body)",
      "Save dark mode setting in localStorage and load on app start"],
     ["Add a 'clear input' button using useRef",
@@ -36,7 +36,7 @@ const tasks = [
       <ul>
         {tasks.map(([task1, task2, leader], idx) => (
           <li key={idx} style={{ marginBottom: '1rem' }}>
-            <strong>Group {idx} { leader ? `arsenal (${leader})` : ""}</strong>
+            <strong>Group {idx} { leader ? `(${leader})` : ""}</strong>
             <ul>
               <li>{task1}</li>
               <li>{task2}</li>
