@@ -1,0 +1,21 @@
+.main-container{
+    text-align: center;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+.title{
+font-size: 34px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 24px;
+  color: #3366cc;
+}
+.timezone-label{
+display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #444;
+}
