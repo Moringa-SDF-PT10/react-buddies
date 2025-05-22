@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react"
+import Modal from "./Modal";
 
 export default function Home(){
 
@@ -7,8 +8,21 @@ export default function Home(){
 
     const inputRef = useRef(null)
 
+    const [isModalOpen, setIsModalOpen] = useState(false)
+
+    //function to open the modal
+    const openModal = () => {
+        setIsModalOpen(true)
+    }
+
+    //function to close the modal
+    const closeModal = () => {
+        setIsModalOpen(false)
+    }
+
     const handleClick = () => {
         inputRef.current?.focus()
+        openModal()
     }
 
     const increaseCount = () => {
@@ -30,7 +44,8 @@ export default function Home(){
                 <p>Previous Count: {prevCount.current}</p>
             <button onClick={increaseCount} >Increase button count</button>
             </div>
-            {/* <div style={display.block}></div> */}
+           {isModalOpen && <Modal isModalOpen ={isModalOpen} closeModal={closeModal}/>}
+
 
         </div>
     )
