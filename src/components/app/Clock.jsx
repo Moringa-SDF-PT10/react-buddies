@@ -38,26 +38,39 @@ const formatTimeInTimezone = () =>{
 }
 console.log(currentTime.toLocaleString);
 
-return (
-    <div className="main-container">
-        <h2 className="title"> ⌚️ Live Clock</h2>
-        <div className="clock-container">
-            {formatTimeInTimezone().split(',')[0]}, 
-                {formatTimeInTimezone().split(',')[2]},
+ return (
+    <div className="container">
+      <div className="clock-card">
+        <h1 className="title">⌚Live Clock</h1>
+        
+        <div className="time-display">
+          <div className="time">
+            {formatTimeInTimezone().split(',')[1].trim().split(' ').slice(0, 2).join(' ')}
+          </div>
+          <div className="date">
+            {formatTimeInTimezone().split(',')[0]},
+            {formatTimeInTimezone().split(',')[2]}
+          </div>
         </div>
-        <label for="timezone" className="timezone-label"> Select Timezone </label>
-        <select 
-        id="timezone"
-        value={timezone}
-        onChange={(e) => setTimezone(e.target.value)}
-      >
-        {timezones.map((tz) => (
-          <option key={tz.value} value={tz.value}>
-            {tz.label}
-          </option>
-        ))}
-      </select>
+        
+        <div className="selector-container">
+          <label className="label" htmlFor="timezone">
+            Select Timezone:
+          </label>
+          <select id="timezone"value={timezone} onChange={handleTimezoneChange}  className="select" >
+            {timezones.map((tz) => (
+              <option key={tz} value={tz}>
+                {tz.replace('_', ' ')}
+              </option>
+            ))}
+          </select>
+        </div>
+        
+        <div className="timezone-display">
+          Current timezone: <span className="timezone-value">{timezone}</span>
+        </div>
+      </div>
     </div>
-   
-)
+  );
+}
 };
