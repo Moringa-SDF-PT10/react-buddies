@@ -18,7 +18,7 @@ export default function Form() {
 
   return (
     <div>
-      <h2 className={focusing ? 'blur' : ''}>This is our controlled form</h2>
+      <h2 className={focusing ? "blur" : ""}>This is our controlled form</h2>
       <form
         onSubmit={(e) => {
           e.preventDefault();
