@@ -4,6 +4,8 @@ import Home from '../Home'
 import TaskList from '../TaskList'
 import './App.css'
 
+
+
 function App() {
 
   return (
@@ -16,9 +18,9 @@ function App() {
         </nav>
         <main className='app-main'>
           <Routes>
-            <Route path='/' element={ <Home/>} />
-            <Route path='/form' element={ <Form/>} />
-            <Route path='/tasks' element={ <TaskList/>} />
+            <Route path='/' element={<Home />} />
+            <Route path='/form' element={<Form />} />
+            <Route path='/tasks' element={<TaskList />} />
           </Routes>
         </main>
       </div>
