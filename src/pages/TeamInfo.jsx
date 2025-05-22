@@ -13,7 +13,7 @@ function TeamInfo() {
   const [editingTeamId, setEditingTeamId] = useState(null);
   const inputRefs = useRef({});
 
-  // Save changes to localStorage
+  // Saves changes to localStorage
   useEffect(() => {
     localStorage.setItem("teams", JSON.stringify(teams));
   }, [teams]);
@@ -59,3 +59,4 @@ function TeamInfo() {
 }
 
 export default TeamInfo;
+

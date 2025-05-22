@@ -1,9 +1,21 @@
 import { Link } from 'react-router-dom';
 
 const defaultTeams = [
-  { id: 1, name: "Team1" },
-  { id: 2, name: "Team2" },
-  { id: 3, name: "Team3" }
+  {
+    id: 1,
+    name: "Team1",
+    members: ["Ivy", "Jack", "Kara", "Leo"],
+  },
+  {
+    id: 2,
+    name: "Team2",
+    members: ["Elena", "Frank", "Grace", "Henry"],
+  },
+  {
+    id: 3,
+    name: "Team3",
+    members: ["Alice", "Brian", "Harriet", "David"],
+  },
 ];
 
 function TeamsList() {
@@ -14,6 +26,11 @@ function TeamsList() {
         {defaultTeams.map(team => (
           <li key={team.id}>
             <Link to={`/team-info/${team.id}`}>{team.name}</Link>
+            <ul>
+              {team.members.map((member, index) => (
+                <li key={index}>{member}</li>
+              ))}
+            </ul>
           </li>
         ))}
       </ul>
@@ -22,3 +39,4 @@ function TeamsList() {
 }
 
 export default TeamsList;
+

@@ -14,7 +14,7 @@ function App() {
         <Link to="/form">Form</Link>
         <Link to="/tasks">Group Tasks</Link>
         <Link to="/teams">Teams List</Link>
-        <Link to="/team-info">Team Info</Link> {/* This links to /teams/1 via redirect */}
+        <Link to="/team-info">Team Info</Link>
       </nav>
 
       <main className="app-main">
@@ -24,7 +24,7 @@ function App() {
           <Route path="/tasks" element={<TaskList />} />
           <Route path="/teams" element={<TeamsList />} />
           <Route path="/teams/:id" element={<TeamInfo />} />
-          <Route path="/team-info" element={<Navigate to="/teams/1" replace />} /> {/* 👈 Redirect */}
+          <Route path="/team-info" element={<Navigate to="/teams/1" replace />} /> 
         </Routes>
       </main>
     </div>
