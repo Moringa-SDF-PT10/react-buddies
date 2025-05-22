@@ -1,21 +1,80 @@
-.main-container{
-    text-align: center;
+
+
+.container {
+  display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 50vh;
+  min-height: 100vh;
   background-color: #f5f5f5;
   padding: 20px;
 }
-.title{
-font-size: 34px;
+
+.clock-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.title {
+  font-size: 24px;
   font-weight: bold;
   text-align: center;
   margin-bottom: 24px;
-  color: #3366cc;
+  color: #000000;
 }
-.timezone-label{
-display: block;
+
+.time-display {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.time {
+  font-size: 32px;
+  font-weight: bold;
+  font-family: monospace;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.date {
+  color: #666;
+}
+
+.selector-container {
+  margin-bottom: 16px;
+}
+
+.label {
+  display: block;
   margin-bottom: 8px;
   font-weight: 500;
   color: #444;
+}
+
+.select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.select:focus {
+  outline: none;
+  border-color: #3366cc;
+  box-shadow: 0 0 0 2px rgba(51, 102, 204, 0.2);
+}
+
+.timezone-display {
+  background-color: #f5f5f5;
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #666;
+}
+
+.timezone-value {
+  font-weight: 600;
 }
