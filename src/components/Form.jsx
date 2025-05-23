@@ -13,7 +13,7 @@ export default function Form(){
             alert(`You have submitted email: ${email}`)
           localStorage.setItem('email',email);
           toast.success(`Email "${localStorage.getItem('email')}" saved successfully!`);
-            setSubmitted(false)
+          setSubmitted(false)
         }
     }, [submitted, email]) // React will render on every character change. BONUS: Improve this approach
 
