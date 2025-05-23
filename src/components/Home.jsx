@@ -1,9 +1,8 @@
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react";
 
-export default function Home(){
-
-    const [count, setCount] = useState(0);
-    const prevCount = useRef(0)
+export default function Home() {
+  const [count, setCount] = useState(0);
+  const prevCount = useRef(0);
 
     const inputRef = useRef(null)
     const removeTimeout = useRef(null); // Ref to store the timeout ID for blur effect
@@ -13,7 +12,7 @@ export default function Home(){
      inputRef.current.style.setProperty("background-color", "lightgreen");
 };
 
-// Function to handle remove the green highlight on focus after a set delay using useRef
+// Function to handle removing the green highlight on focus after a set delay using useRef
     const handleRemoveTimeout = () => {
     removeTimeout.current = setTimeout(() => {
     inputRef.current.style.removeProperty("background-color");
@@ -23,13 +22,13 @@ export default function Home(){
         inputRef.current?.focus()
     }
 
-    const increaseCount = () => {
-        setCount(count + 1)
-    }
+  const increaseCount = () => {
+    setCount(count + 1);
+  };
 
-    useEffect(() => {
-        prevCount.current = count
-    }, [count])
+  useEffect(() => {
+    prevCount.current = count;
+  }, [count]);
 
     return (
         <div>
