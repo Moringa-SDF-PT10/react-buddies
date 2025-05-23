@@ -27,7 +27,7 @@ export default function Form(){
                 <input value={email} onChange={(e) => setEmail(e.target.value)} />
                 <button type="submit">Submit</button>
             </form>
-            <ToastContainer position="top-center"/>
+            <ToastContainer position="top-center"/> 
 
 
         </div>
