@@ -2,6 +2,7 @@ import { Link, Routes, Route } from 'react-router-dom'
 import Form from '../Form'
 import Home from '../Home'
 import TaskList from '../TaskList'
+import Clock from './Clock'
 import './App.css'
 import { useState, useEffect } from 'react'
 import GroupSeven from "../GroupSeven";
@@ -49,6 +50,7 @@ function App() {
           <Link to={"/form"}>Form</Link>
           <Link to={"/tasks"}>Group Tasks</Link>
           <Link to={"/group-7"}>Group 7</Link>
+           <Link to={"/clock"}>Clock</Link>
         </nav>
         <main className="app-main">
           <Routes>
@@ -56,6 +58,7 @@ function App() {
             <Route path='/form' element={<Form />} />
             <Route path='/tasks' element={<TaskList />} />
             <Route path="/group-7" element={<GroupSeven />} />
+            <Route path='/clock' element={ <Clock/>} />
           </Routes>
           <button onClick={changeMode}>Toggle Mode</button>
         </main>
