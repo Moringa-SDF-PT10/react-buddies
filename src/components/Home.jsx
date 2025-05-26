@@ -1,37 +1,35 @@
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react";
 
-export default function Home(){
+export default function Home() {
+  const [count, setCount] = useState(0);
+  const prevCount = useRef(0);
 
-    const [count, setCount] = useState(0);
-    const prevCount = useRef(0)
+  const inputRef = useRef(null);
 
-    const inputRef = useRef(null)
+  const handleClick = () => {
+    inputRef.current?.focus();
+  };
 
-    const handleClick = () => {
-        inputRef.current?.focus()
-    }
+  const increaseCount = () => {
+    setCount(count + 1);
+  };
 
-    const increaseCount = () => {
-        setCount(count + 1)
-    }
+  useEffect(() => {
+    prevCount.current = count;
+  }, [count]);
 
-    useEffect(() => {
-        prevCount.current = count
-    }, [count])
-
-    return (
-        <div>
-            <h2>Welcome to the React Buddies page</h2>
-            <p>This is a live collaborative demo for useRef hook:</p>
-            <input ref={inputRef} placeholder="Check me out" />
-            <button onClick={handleClick}>Click Me</button>
-            <div>
-                <p>Current Count: {count}</p>
-                <p>Previous Count: {prevCount.current}</p>
-            <button onClick={increaseCount} >Increase button count</button>
-            </div>
-            {/* <div style={display.block}></div> */}
-
-        </div>
-    )
+  return (
+    <div>
+      <h2>Welcome to the React Buddies page</h2>
+      <p>This is a live collaborative demo for useRef hook:</p>
+      <input ref={inputRef} placeholder="Check me out" />
+      <button onClick={handleClick}>Click Me</button>
+      <div>
+        <p>Current Count: {count}</p>
+        <p>Previous Count: {prevCount.current}</p>
+        <button onClick={increaseCount}>Increase button count</button>
+      </div>
+      {/* <div style={display.block}></div> */}
+    </div>
+  );
 }
